@@ -99,3 +99,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# ide
+*.idea/
+
+# project config
+api/config/production.py
+api/config/development.py
+api/config/testing.py
