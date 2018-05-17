@@ -16,7 +16,7 @@ class BaseResource(Resource):
                 if len(list(kwargs.keys())) < 3:
                     record_id = list(kwargs.values())[0]
                     message = model_message if model_message else str(model)
-                    record = model.find_by_id(record_id)
+                    record = model.find_by_pk(record_id)
                     if record is None:
                         error(InterfaceTips.DATA_NOT_EXISTED, {'model': message})
                     cls.record = record
